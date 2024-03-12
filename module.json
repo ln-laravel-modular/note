@@ -1,6 +1,7 @@
 {
     "name": "Note",
     "alias": "note",
+    "type": "project",
     "description": "",
     "keywords": [],
     "priority": 0,

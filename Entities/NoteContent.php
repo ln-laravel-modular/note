@@ -12,6 +12,7 @@ class NoteContent extends Model
     protected $fillable = [
         'title',
         'slug',
+        'text',
     ];
 
 
