@@ -19,15 +19,7 @@ use Nwidart\Modules\Laravel\Module;
 
 Route::prefix(Module::currentConfig('web.prefix'))->group(function () {
     // Route::get('/', 'NoteController@index');
-    Route::get('/', function (Request $request) {
-        $return = [
-            'view' => 'note::web.index',
-            'readonly' => true,
-            'contentPaginator' => NoteContent::paginate(10),
-            'metaPaginator' => NoteMeta::paginate(10),
-        ];
-        return view($return['view'], $return);
-    });
+    Route::get('/', 'NoteController@view_index');
 });
 
 // Route::prefix('admin')->group(function () {

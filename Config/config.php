@@ -3,7 +3,11 @@
 
 return [
     'name' => 'Note',
+    'slug' => 'note',
     'prefix' => 'note',
+    'ui' => 'bootstrap',
+    'layout' => 'bootstrap',
+    'theme' => 'default',
     'web' => [
         'theme' => '',
     ],
@@ -11,6 +15,7 @@ return [
         \Modules\Note\Entities\NoteContent::class,
         \Modules\Note\Entities\NoteMeta::class,
     ],
+    'navbar' => [],
     'admin' => [
         'sidebar' => [
             ["path" => "/note", "title" => 'Note', "icon" => "fas fa-layer-group", "slug" => "", "children" => [

@@ -5,8 +5,9 @@ namespace Modules\Note\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Note\Entities\NoteContent;
 
-class NoteController extends Controller
+class NoteController extends \App\Http\Controllers\Controller
 {
     /**
      * Display a listing of the resource.
@@ -75,5 +76,16 @@ class NoteController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function view_index(Request $request)
+    {
+        $return = [
+            'view' => 'note::web.index',
+            'readonly' => true,
+            'contentPaginator' => NoteContent::paginate(10),
+            // 'metaPaginator' => NoteMeta::paginate(10),
+        ];
+        return $this->view($return['view'], $return);
     }
 }
