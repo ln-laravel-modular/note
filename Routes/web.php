@@ -1,10 +1,10 @@
 <?php
 
-use Modules\Note\Entities\NoteContent;
+use Modules\Note\Models\NoteContent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Modules\Note\Entities\NoteMeta;
-use Nwidart\Modules\Laravel\Module;
+use Modules\Note\Models\NoteMeta;
+use App\Support\Module;
 
 /*
 |--------------------------------------------------------------------------

@@ -5,7 +5,7 @@ namespace Modules\Note\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Modules\Note\Entities\NoteContent;
+use Modules\Note\Models\NoteContent;
 
 class NoteController extends \App\Http\Controllers\Controller
 {

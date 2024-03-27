@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Note\Entities;
+namespace Modules\Note\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class NoteMeta extends Model
+class NoteRelationship extends Model
 {
     use HasFactory;
 
@@ -13,6 +13,6 @@ class NoteMeta extends Model
 
     protected static function newFactory()
     {
-        return \Modules\Note\Database\factories\NoteMetaFactory::new();
+        return \Modules\Note\Database\factories\NoteRelationshipFactory::new();
     }
 }

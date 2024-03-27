@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Note\Entities;
+namespace Modules\Note\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -17,6 +17,8 @@ class NoteContent extends Model
 
 
     protected $primaryKey = 'cid';
+
+    protected $primaryKeyPlural = 'cids';
 
     protected static function newFactory()
     {
